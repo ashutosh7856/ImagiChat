@@ -33,14 +33,12 @@ def clean_ocr_text(text: str) -> str:
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     return "\n".join(lines)
 
-
 @app.post("/")
 # async def extract_text_from_image(files: list[UploadFile] = File(...)):
 async def process_inputs(
     files: Optional[List[UploadFile]] = File(None),
     user_text: Optional[str] = Form(None)            # Optional user text
 ):
-
     results = []
     # Handle images if provided
     if files:
