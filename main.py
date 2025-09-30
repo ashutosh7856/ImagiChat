@@ -9,8 +9,10 @@ from openai import OpenAI
 import os
 
 STATIC_PROMPT = "You are an assistant that cleans OCR text and converts it into clear, meaningful questions with four multiple-choice options."
+
 # Set your OpenAI API key here or better via environment variable
 app = FastAPI()
+
 # Initialize OpenAI client
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_KEY)
