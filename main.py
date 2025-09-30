@@ -81,7 +81,6 @@ async def process_inputs(
         )
 
         openai_response = response.choices[0].message.content
-
         results.append({
             "combined_text": combined_text,
             "openai_response": openai_response
