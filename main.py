@@ -8,7 +8,7 @@ import re
 from openai import OpenAI
 import os
 
-STATIC_PROMPT = "You are an assistant that cleans OCR text and converts it into clear, meaningful questions with four multiple-choice options."
+STATIC_PROMPT="You are an assistant that cleans OCR text and converts it into clear, meaningful questions with four multiple-choice options."
 
 # Set your OpenAI API key here or better via environment variable
 app = FastAPI()
